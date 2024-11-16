@@ -2,28 +2,29 @@
 
 ## 🌟 Description
 
-**Pokémon API** est une application web conçue pour fournir des informations détaillées sur les Pokémon. Elle permet d’accéder facilement à des données telles que les types, les capacités, les statistiques, les évolutions, les générations, et bien plus encore. Cette API est idéale pour les développeurs souhaitant intégrer des fonctionnalités Pokémon dans leurs projets.
-
----
-# 🚀 Guide d'installation du projet Pokémon API
-
-## 📋 Prérequis
-
-Avant de commencer, assurez-vous que votre système dispose des outils suivants installés :
-
-- **PHP 8.0 ou supérieur**
-- **Composer** (gestionnaire de dépendances PHP)
-- **MySQL** ou **PostgreSQL** (base de données)
-- **Node.js** et **npm** (optionnel si le projet inclut des éléments front-end)
-- **Git** (pour cloner le projet)
+**Pokémon API** is a web application designed to provide detailed information about Pokémon. It allows easy access to data such as types, abilities, stats, evolutions, generations, and much more. This API is ideal for developers who want to integrate Pokémon features into their projects.
 
 ---
 
-## 📥 Étapes d'installation
+# 🚀 Project Installation Guide
 
-### 1️⃣ **Cloner le dépôt**
+## 📋 Prerequisites
 
-Commencez par cloner le dépôt GitHub :
+Before getting started, ensure your system has the following tools installed:
+
+- **PHP 8.0 or higher**
+- **Composer** (PHP dependency manager)
+- **MySQL** or **PostgreSQL** (database)
+- **Node.js** and **npm** (optional, if the project includes front-end components)
+- **Git** (to clone the project)
+
+---
+
+## 📥 Installation Steps
+
+### 1️⃣ **Clone the repository**
+
+Start by cloning the GitHub repository:
 
 ```bash
 git clone https://github.com/ZAomineZ/api_pokemon.git
@@ -31,18 +32,18 @@ git clone https://github.com/ZAomineZ/api_pokemon.git
 cd api_pokemon
 ```
 
-### 2️⃣ **Installer les dépendances**
+### 2️⃣ **Install dependencies**
 
-Installez les dépendances PHP avec Composer:
+Install PHP dependencies with Composer:
 
 ```bash
 composer install
 npm install
 ```
 
-### 3️⃣ **Installer les dépendances**
+### 3️⃣ **Configure the environment**
 
-Copiez le fichier d'exemple .env.example pour créer votre fichier .env:
+Copy the .env.example file to create your .env file:
 
 ```bash
 cp .env.example .env
@@ -55,16 +56,16 @@ DB_USERNAME=root
 DB_PASSWORD=your_password
 ```
 
-###  4️⃣ **Migrer et peupler la base de données**
+###  4️⃣ **Migrate and seed the database**
 
-Créez les tables nécessaires et ajoutez les données initiales en exécutant:
+Create the necessary tables and populate the database with initial data:
 ```bash
 php artisan migrate
 ```
 
-### 5️⃣ Lancer le serveur local
+### 5️⃣ Start the local server
 
-Démarrez le serveur de développement Laravel:
+Start the Laravel development server:
 
 ```bash
 php artisan serve
@@ -75,134 +76,133 @@ http://localhost:8000
 ```
 ---
 
-# 📦 Scrapper les données des Pokémon
+# 📦 Scraping Pokémon Data
 
-Pour scrapper et importer les données des Pokémon dans votre base de données, vous devez utiliser une commande Artisan prévue à cet effet.
+To scrape and import Pokémon data into your database, you need to use a specific Artisan command.
 
 ---
 
-## 📋 Commande à exécuter
+## 📋 Command to execute
 
-Exécutez la commande suivante dans votre terminal :
-
+Run the following command in your terminal:
 ```bash
 php artisan scrapp:pokemon
 ```
 
-### 🛠️ Fonctionnement
+### 🛠️ How it works
 
-#### Que fait cette commande ?
+#### What does this command do?
 
-- Cette commande récupère des données des Pokémon à partir d'une source externe (par exemple, une API ou un fichier).
-- Les données scrappées sont ensuite transformées et sauvegardées dans la base de données.
+- This command retrieves Pokémon data from an external source (e.g., an API or a file).
+- The scraped data is then transformed and saved into the database.
 
-#### Prérequis avant d'exécuter la commande :
+#### Prerequisites before executing the command:
 
-1. Assurez-vous que votre base de données est configurée et migrée.
-2. Le fichier `.env` doit contenir les informations correctes de connexion à la base de données.
-3. Vérifiez que la source des données (API ou fichier) est accessible.
+1. Ensure your database is configured and migrated.
+2. The .env file must contain the correct database connection details.
+3. Verify that the data source (API or file) is accessible.
 ---
 
-## 📚 Fonctionnalités de l'api
+## 📚 API Features
 
-- **🔍 Recherche de Pokémon :**
-    - Recherchez un Pokémon par son nom (anglais ou français) ou son numéro unique.
-    - Filtrez les Pokémon selon plusieurs critères : poids, taille, génération, types, capacités ou mouvements spécifiques.
+### 🔍 Pokémon Search:
+- Search for a Pokémon by its name (English or French) or unique number.
+- Filter Pokémon by various criteria: weight, height, generation, types, abilities, or specific moves.
 
-- **📊 Statistiques complètes :**
-    - Obtenez des statistiques détaillées comme l'attaque, la défense, la vitesse, l'attaque spéciale, et plus encore.
-    - Consultez les capacités associées à chaque Pokémon avec des descriptions précises.
+### 📊 Complete Stats:
+- Access detailed stats such as attack, defense, speed, special attack, and more.
+- View abilities associated with each Pokémon, with detailed descriptions.
 
-- **🌐 Générations et types :**
-    - Explorez les Pokémon par génération ou type pour une classification facile.
-    - Recherchez des générations par leur nom (anglais ou français) et découvrez les Pokémon associés.
-    - Accédez aux compatibilités des types (par exemple, les forces et faiblesses des types Feu, Eau, etc.).
+### 🌐 Generations and Types:
+- Explore Pokémon by generation or type for easy classification.
+- Search for generations by name (English or French) and discover associated Pokémon.
+- Access type compatibility information (e.g., strengths and weaknesses of Fire, Water, etc.).
 
-- **🌀 Mouvements (Moves) :**
-    - Listez les mouvements disponibles pour chaque Pokémon, avec des détails tels que la puissance, la précision et le nombre de PP.
-    - Recherchez des mouvements par leur nom et découvrez les Pokémon qui peuvent les apprendre.
+### 🌀 Moves:
+- List available moves for each Pokémon with details such as power, accuracy, and PP.
+- Search for moves by name and discover the Pokémon that can learn them.
 
-- **💡 Capacités (Abilities) :**
-    - Explorez les capacités uniques de chaque Pokémon, avec des descriptions en anglais et en français.
-    - Recherchez des capacités par leur nom pour identifier les Pokémon qui les possèdent.
+### 💡 Abilities:
+- Explore unique abilities for each Pokémon, with descriptions in English and French.
+- Search for abilities by name to identify Pokémon that possess them.
 
-- **📋 Pagination et recherche :**
-    - Paginez facilement les résultats pour naviguer dans de grandes listes de Pokémon, types, capacités ou générations.
-    - Utilisez des filtres avancés pour trouver rapidement les informations pertinentes.
-
+### 📋 Pagination and Search:
+- Easily paginate results to navigate large lists of Pokémon, types, abilities, or generations.
+- Use advanced filters to quickly find relevant information.
 ---
 
-Ces fonctionnalités permettent une exploration complète et précise de l'univers Pokémon, adaptée à la fois aux développeurs et aux utilisateurs finaux.
+These features enable a complete and precise exploration of the Pokémon universe, tailored to both developers and end-users.
 
 # API Pokémon - Documentation des Query Parameters
 
 ## 🌟 Endpoints principaux
 
 ### **`/api/pokemons`**
-Cet endpoint permet de rechercher et de filtrer les Pokémon en fonction de différents critères.
+This endpoint lets you search for and filter Pokémon according to various criteria.
 
 ---
 
-## 📚 Query Parameters disponibles
+## 📚 Available Query Parameters
 
-### **Recherche par mot-clé**
-- **Paramètre :** `q`
-- **Description :** Filtrer les Pokémon dont le nom (anglais) contient le mot-clé donné.
-- **Type :** `string`
-- **Exemple :**
+### **Keyword Search**
+- **Parameter:** `q`
+- **Description:** Filter Pokémon whose name (in English) contains the given keyword.
+- **Type:** `string`
+- **Example:**
   ```http
   GET /api/pokemons?q=bulb
   ```
 
-### **Liste des paramètres**
+### **List of Parameters**
 
-| **Paramètre**         | **Description**                                   | **Type**      | **Exemple**                   |
+| **Parameter**         | **Description**                                   | **Type**      | **Example**                   |
 |------------------------|---------------------------------------------------|---------------|-------------------------------|
-| `q`                   | Recherche par mot-clé dans le nom                 | `string`      | `?q=bulb`                    |
-| `num`                 | Recherche par numéro                              | `integer`     | `?num=1`                     |
-| `base_experience`     | Filtrer par expérience de base                    | `integer`     | `?base_experience=50`        |
-| `type`                | Filtrer par type                                  | `string`      | `?type=grass`                |
-| `ability`             | Filtrer par capacité                              | `string`      | `?ability=overgrow`          |
-| `move`                | Filtrer par mouvement                             | `string`      | `?move=tackle`               |
-| `generation`          | Filtrer par génération                            | `string`      | `?generation=Generation I`   |
-| `weight`              | Poids supérieur à la valeur donnée                | `integer`     | `?weight=50`                 |
-| `height`              | Taille supérieure à la valeur donnée              | `integer`     | `?height=10`                 |
-| `hp`                  | Points de vie                                     | `integer`     | `?hp=45`                     |
-| `attack`              | Valeur d'attaque                                  | `integer`     | `?attack=49`                 |
-| `defense`             | Valeur de défense                                 | `integer`     | `?defense=49`                |
-| `special_attack`      | Attaque spéciale                                  | `integer`     | `?special_attack=65`         |
-| `special_defense`     | Défense spéciale                                  | `integer`     | `?special_defense=65`        |
-| `speed`               | Vitesse                                           | `integer`     | `?speed=45`                  |
-| `legendary`           | Trouver les Pokémon légendaires                   | `boolean`     | `?legendary=true`            |
-| `mega_evolution`      | Trouver les Pokémon avec une méga-évolution       | `boolean`     | `?mega_evolution=true`       |
+| `q`                   | Search by keyword in the name                     | `string`      | `?q=bulb`                    |
+| `num`                 | Search by number                                  | `integer`     | `?num=1`                     |
+| `base_experience`     | Filter by base experience                         | `integer`     | `?base_experience=50`        |
+| `type`                | Filter by type                                    | `string`      | `?type=grass`                |
+| `ability`             | Filter by ability                                 | `string`      | `?ability=overgrow`          |
+| `move`                | Filter by move                                    | `string`      | `?move=tackle`               |
+| `generation`          | Filter by generation                              | `string`      | `?generation=Generation I`   |
+| `weight`              | Weight greater than the given value               | `integer`     | `?weight=50`                 |
+| `height`              | Height greater than the given value               | `integer`     | `?height=10`                 |
+| `hp`                  | Hit points                                        | `integer`     | `?hp=45`                     |
+| `attack`              | Attack value                                      | `integer`     | `?attack=49`                 |
+| `defense`             | Defense value                                     | `integer`     | `?defense=49`                |
+| `special_attack`      | Special attack value                              | `integer`     | `?special_attack=65`         |
+| `special_defense`     | Special defense value                             | `integer`     | `?special_defense=65`        |
+| `speed`               | Speed                                             | `integer`     | `?speed=45`                  |
+| `legendary`           | Find legendary Pokémon                            | `boolean`     | `?legendary=true`            |
+| `mega_evolution`      | Find Pokémon with mega evolution                  | `boolean`     | `?mega_evolution=true`       |
 
-# API Pokémon - Endpoint : `/api/pokemons/{name}`
+
+# API Pokémon - Endpoint: `/api/pokemons/{name}`
 
 ## 🌟 Description
 
-Cet endpoint permet de récupérer les informations complètes sur un Pokémon spécifique en utilisant son nom (en anglais ou en français). Les données retournées incluent les détails du Pokémon, ses générations, ses capacités, ses types, ses mouvements, et ses statistiques.
+This endpoint retrieves complete information about a specific Pokémon using its name (in English or French). The returned data includes the Pokémon's details, generations, abilities, types, moves, and stats.
 
 ---
 
-## 📥 Requête
+## 📥 Request
 
-### **Méthode HTTP :** `GET`
+### **HTTP Method:** `GET`
 
-### **URL :** `/api/pokemons/{name}`
+### **URL:** `/api/pokemons/{name}`
 
-### **Paramètres**
+### **Parameters**
 
-| **Paramètre** | **Type**   | **Requis** | **Description**                       |
-|---------------|------------|------------|---------------------------------------|
-| `name`        | `string`   | Oui        | Le nom du Pokémon (en anglais ou français). |
+| **Parameter** | **Type**   | **Required** | **Description**                      |
+|---------------|------------|--------------|---------------------------------------|
+| `name`        | `string`   | Yes          | The name of the Pokémon (in English or French). |
 
 ---
 
-## 📤 Réponse
+## 📤 Response
 
-### **Format :** `application/json`
+### **Format:** `application/json`
 
-### **Structure des données retournées :**
+### **Structure of the returned data:**
 
 ```json
 {
@@ -250,7 +250,7 @@ Cet endpoint permet de récupérer les informations complètes sur un Pokémon s
         }
     ],
     "moves_pokemon": [
-       "http://127.0.0.1:8000/api/moves/razor-wind"
+        "http://127.0.0.1:8000/api/moves/razor-wind"
     ]
 }
 ```
@@ -261,31 +261,35 @@ Cet endpoint permet de récupérer les informations complètes sur un Pokémon s
 
 Cet endpoint permet de récupérer une liste paginée des mouvements (moves) Pokémon. Il offre également la possibilité de filtrer les résultats en fonction de plusieurs critères comme le nom, la précision (accuracy), la puissance (power) ou le nombre d'utilisations (PP).
 
----
+# API Pokémon - Endpoint: `/api/moves`
 
-## 📥 Requête
+## 🌟 Description
 
-### **Méthode HTTP :** `GET`
-
-### **URL :** `/api/moves`
-
-### **Query Parameters disponibles**
-
-| **Paramètre** | **Type**   | **Requis** | **Description**                                                    |
-|---------------|------------|------------|--------------------------------------------------------------------|
-| `per_page`    | `integer`  | Non        | Nombre de résultats par page. Valeur par défaut : `25`.            |
-| `q`           | `string`   | Non        | Recherche par mot-clé dans le nom du mouvement (anglais uniquement).|
-| `accuracy`    | `integer`  | Non        | Filtrer les mouvements par précision exacte.                       |
-| `power`       | `integer`  | Non        | Filtrer les mouvements par puissance exacte.                       |
-| `pp`          | `integer`  | Non        | Filtrer les mouvements par nombre d'utilisations (PP).             |
+This endpoint retrieves a paginated list of Pokémon moves. It also allows filtering results based on several criteria such as name, accuracy, power, or PP (Power Points).
 
 ---
 
-## 📤 Réponse
+## 📥 Request
 
-### **Format :** `application/json`
+### **HTTP Method:** `GET`
 
-### **Structure des données retournées :**
+### **URL:** `/api/moves`
+
+### **Available Query Parameters**
+
+| **Parameter** | **Type**   | **Required** | **Description**                                                    |
+|---------------|------------|--------------|--------------------------------------------------------------------|
+| `per_page`    | `integer`  | No           | Number of results per page. Default value: `25`.                   |
+| `q`           | `string`   | No           | Search by keyword in the move's name (English only).               |
+| `accuracy`    | `integer`  | No           | Filter moves by exact accuracy.                                    |
+| `power`       | `integer`  | No           | Filter moves by exact power.                                       |
+| `pp`          | `integer`  | No           | Filter moves by number of Power Points (PP).                       |
+
+---
+
+n/json`
+
+### **Structure of the returned data:**
 
 ```json
 {
@@ -328,34 +332,33 @@ Cet endpoint permet de récupérer une liste paginée des mouvements (moves) Pok
     "total": 250
 }
 ```
-
-# API Pokémon - Endpoint : `/api/moves/{name}`
+# API Pokémon - Endpoint: `/api/moves/{name}`
 
 ## 🌟 Description
 
-Cet endpoint permet de récupérer les détails d'un mouvement (move) Pokémon spécifique en utilisant son nom en anglais. Les données retournées incluent les informations sur le mouvement et les Pokémon associés, avec des relations masquées dynamiquement pour simplifier la réponse.
+This endpoint retrieves the details of a specific Pokémon move using its English name. The returned data includes information about the move and associated Pokémon, with dynamically hidden relationships to simplify the response.
 
 ---
 
-## 📥 Requête
+## 📥 Request
 
-### **Méthode HTTP :** `GET`
+### **HTTP Method:** `GET`
 
-### **URL :** `/api/moves/{name}`
+### **URL:** `/api/moves/{name}`
 
-### **Paramètres**
+### **Parameters**
 
-| **Paramètre** | **Type**   | **Requis** | **Description**                             |
-|---------------|------------|------------|---------------------------------------------|
-| `name`        | `string`   | Oui        | Le nom en anglais du mouvement Pokémon.     |
+| **Parameter** | **Type**   | **Required** | **Description**                             |
+|---------------|------------|--------------|---------------------------------------------|
+| `name`        | `string`   | Yes          | The English name of the Pokémon move.       |
 
 ---
 
-## 📤 Réponse
+## 📤 Response
 
-### **Format :** `application/json`
+### **Format:** `application/json`
 
-### **Structure des données retournées :**
+### **Structure of the returned data:**
 
 ```json
 {
@@ -375,35 +378,35 @@ Cet endpoint permet de récupérer les détails d'un mouvement (move) Pokémon s
     ]
 }
 ```
-
-# API Pokémon - Endpoint : `/api/types`
+---
+# API Pokémon - Endpoint: `/api/types`
 
 ## 🌟 Description
 
-Cet endpoint permet de récupérer une liste paginée des types Pokémon. Il offre également la possibilité de rechercher par mot-clé sur le nom en anglais des types. Les relations inutiles, comme les Pokémon associés, sont chargées pour des besoins internes mais masquées dans la réponse.
+This endpoint retrieves a paginated list of Pokémon types. It also allows searching by keyword in the English name of the types. Unnecessary relationships, such as associated Pokémon, are loaded for internal purposes but hidden in the response.
 
 ---
 
-## 📥 Requête
+## 📥 Request
 
-### **Méthode HTTP :** `GET`
+### **HTTP Method:** `GET`
 
-### **URL :** `/api/types`
+### **URL:** `/api/types`
 
-### **Query Parameters disponibles**
+### **Available Query Parameters**
 
-| **Paramètre** | **Type**   | **Requis** | **Description**                                                    |
-|---------------|------------|------------|--------------------------------------------------------------------|
-| `per_page`    | `integer`  | Non        | Nombre de résultats par page. Valeur par défaut : `25`.            |
-| `q`           | `string`   | Non        | Recherche par mot-clé dans le nom du type (anglais uniquement).    |
+| **Parameter** | **Type**   | **Required** | **Description**                                                    |
+|---------------|------------|--------------|--------------------------------------------------------------------|
+| `per_page`    | `integer`  | No           | Number of results per page. Default value: `25`.                   |
+| `q`           | `string`   | No           | Search by keyword in the type's name (English only).               |
 
 ---
 
-## 📤 Réponse
+## 📤 Response
 
-### **Format :** `application/json`
+### **Format:** `application/json`
 
-### **Structure des données retournées :**
+### **Structure of the returned data:**
 
 ```json
 {
@@ -443,33 +446,36 @@ Cet endpoint permet de récupérer une liste paginée des types Pokémon. Il off
 }
 ```
 
-# API Pokémon - Endpoint : `/api/types/{name}`
+# API Pokémon - Endpoint: `/api/types/{name}`
 
 ## 🌟 Description
 
-Cet endpoint permet de récupérer les détails d'un type Pokémon spécifique en utilisant son nom (en anglais ou en français). Les données retournées incluent des informations sur le type ainsi que les Pokémon associés à ce type. Certaines relations inutiles, comme `type_pokemons`, sont masquées dynamiquement pour simplifier la réponse.
+This endpoint retrieves the details of a specific Pokémon type using its name (in English or French). The returned data includes information about the type as well as the Pokémon associated with it. Certain unnecessary relationships, such as `type_pokemons`, are dynamically hidden to simplify the response.
 
 ---
 
-## 📥 Requête
+## 📥 Request
 
-### **Méthode HTTP :** `GET`
+### **HTTP Method:** `GET`
 
-### **URL :** `/api/types/{name}`
+### **URL:** `/api/types/{name}`
 
-### **Paramètres**
+### **Parameters**
 
-| **Paramètre** | **Type**   | **Requis** | **Description**                             |
-|---------------|------------|------------|---------------------------------------------|
-| `name`        | `string`   | Oui        | Le nom du type Pokémon (en anglais ou français). |
+| **Parameter** | **Type**   | **Required** | **Description**                             |
+|---------------|------------|--------------|---------------------------------------------|
+| `name`        | `string`   | Yes          | The name of the Pokémon type (in English or French). |
 
+
+markdown
+Copier le code
 ---
 
-## 📤 Réponse
+## 📤 Response
 
-### **Format :** `application/json`
+### **Format:** `application/json`
 
-### **Structure des données retournées :**
+### **Structure of the returned data:**
 
 ```json
 {
@@ -487,34 +493,34 @@ Cet endpoint permet de récupérer les détails d'un type Pokémon spécifique e
 }
 ```
 
-# API Pokémon - Endpoint : `/api/abilities`
+# API Pokémon - Endpoint: `/api/abilities`
 
 ## 🌟 Description
 
-Cet endpoint permet de récupérer une liste paginée des capacités (abilities) Pokémon. Il prend en charge la recherche par mot-clé sur le nom en anglais des capacités. Les relations inutiles, comme les Pokémon associés, sont chargées pour des besoins internes mais masquées dans la réponse.
+This endpoint retrieves a paginated list of Pokémon abilities. It supports keyword search for ability names in English. Unnecessary relationships, such as associated Pokémon, are loaded for internal purposes but hidden in the response.
 
 ---
 
-## 📥 Requête
+## 📥 Request
 
-### **Méthode HTTP :** `GET`
+### **HTTP Method:** `GET`
 
-### **URL :** `/api/abilities`
+### **URL:** `/api/abilities`
 
-### **Query Parameters disponibles**
+### **Available Query Parameters**
 
-| **Paramètre** | **Type**   | **Requis** | **Description**                                                    |
-|---------------|------------|------------|--------------------------------------------------------------------|
-| `per_page`    | `integer`  | Non        | Nombre de résultats par page. Valeur par défaut : `25`.            |
-| `q`           | `string`   | Non        | Recherche par mot-clé dans le nom de la capacité (anglais uniquement). |
+| **Parameter** | **Type**   | **Required** | **Description**                                                    |
+|---------------|------------|--------------|--------------------------------------------------------------------|
+| `per_page`    | `integer`  | No           | Number of results per page. Default value: `25`.                   |
+| `q`           | `string`   | No           | Search by keyword in the ability name (English only).              |
 
 ---
 
-## 📤 Réponse
+## 📤 Response
 
-### **Format :** `application/json`
+### **Format:** `application/json`
 
-### **Structure des données retournées :**
+### **Structure of the returned data:**
 
 ```json
 {
@@ -562,33 +568,33 @@ Cet endpoint permet de récupérer une liste paginée des capacités (abilities)
 }
 ```
 
-# API Pokémon - Endpoint : `/api/abilities/{name}`
+# API Pokémon - Endpoint: `/api/abilities/{name}`
 
 ## 🌟 Description
 
-Cet endpoint permet de récupérer les détails d'une capacité (ability) Pokémon spécifique en utilisant son nom en anglais. Les données retournées incluent des informations sur la capacité ainsi que les Pokémon associés. Certaines relations inutiles, comme `moves_pokemon`, sont masquées dynamiquement pour simplifier la réponse.
+This endpoint retrieves the details of a specific Pokémon ability using its English name. The returned data includes information about the ability as well as the associated Pokémon. Certain unnecessary relationships, such as `moves_pokemon`, are dynamically hidden to simplify the response.
 
 ---
 
-## 📥 Requête
+## 📥 Request
 
-### **Méthode HTTP :** `GET`
+### **HTTP Method:** `GET`
 
-### **URL :** `/api/abilities/{name}`
+### **URL:** `/api/abilities/{name}`
 
-### **Paramètres**
+### **Parameters**
 
-| **Paramètre** | **Type**   | **Requis** | **Description**                             |
-|---------------|------------|------------|---------------------------------------------|
-| `name`        | `string`   | Oui        | Le nom de la capacité Pokémon en anglais.   |
+| **Parameter** | **Type**   | **Required** | **Description**                             |
+|---------------|------------|--------------|---------------------------------------------|
+| `name`        | `string`   | Yes          | The name of the Pokémon ability in English. |
 
 ---
 
-## 📤 Réponse
+## 📤 Response
 
-### **Format :** `application/json`
+### **Format:** `application/json`
 
-### **Structure des données retournées :**
+### **Structure of the returned data:**
 
 ```json
 {
@@ -607,34 +613,34 @@ Cet endpoint permet de récupérer les détails d'une capacité (ability) Pokém
 }
 ```
 
-# API Pokémon - Endpoint : `/api/generations`
+# API Pokémon - Endpoint: `/api/generations`
 
 ## 🌟 Description
 
-Cet endpoint permet de récupérer une liste paginée des générations Pokémon. Il prend en charge la recherche par mot-clé sur le nom en anglais des générations. Les relations inutiles, comme les Pokémon associés, sont chargées pour des besoins internes mais masquées dans la réponse.
+This endpoint retrieves a paginated list of Pokémon generations. It supports keyword search for generation names in English. Unnecessary relationships, such as associated Pokémon, are loaded for internal purposes but hidden in the response.
 
 ---
 
-## 📥 Requête
+## 📥 Request
 
-### **Méthode HTTP :** `GET`
+### **HTTP Method:** `GET`
 
-### **URL :** `/api/generations`
+### **URL:** `/api/generations`
 
-### **Query Parameters disponibles**
+### **Available Query Parameters**
 
-| **Paramètre** | **Type**   | **Requis** | **Description**                                                    |
-|---------------|------------|------------|--------------------------------------------------------------------|
-| `per_page`    | `integer`  | Non        | Nombre de résultats par page. Valeur par défaut : `25`.            |
-| `q`           | `string`   | Non        | Recherche par mot-clé dans le nom de la génération (anglais uniquement). |
+| **Parameter** | **Type**   | **Required** | **Description**                                                    |
+|---------------|------------|--------------|--------------------------------------------------------------------|
+| `per_page`    | `integer`  | No           | Number of results per page. Default value: `25`.                   |
+| `q`           | `string`   | No           | Search by keyword in the generation name (English only).           |
 
 ---
 
-## 📤 Réponse
+## 📤 Response
 
-### **Format :** `application/json`
+### **Format:** `application/json`
 
-### **Structure des données retournées :**
+### **Structure of the returned data:**
 
 ```json
 {
@@ -668,33 +674,33 @@ Cet endpoint permet de récupérer une liste paginée des générations Pokémon
 }
 ```
 
-# API Pokémon - Endpoint : `/api/generations/{name}`
+# API Pokémon - Endpoint: `/api/generations/{name}`
 
 ## 🌟 Description
 
-Cet endpoint permet de récupérer les détails d'une génération Pokémon spécifique en utilisant son nom (en anglais ou en français).
+This endpoint retrieves the details of a specific Pokémon generation using its name (in English or French).
 
 ---
 
-## 📥 Requête
+## 📥 Request
 
-### **Méthode HTTP :** `GET`
+### **HTTP Method:** `GET`
 
-### **URL :** `/api/generations/{name}`
+### **URL:** `/api/generations/{name}`
 
-### **Paramètres**
+### **Parameters**
 
-| **Paramètre** | **Type**   | **Requis** | **Description**                             |
-|---------------|------------|------------|---------------------------------------------|
-| `name`        | `string`   | Oui        | Le nom de la génération Pokémon (en anglais ou en français). |
+| **Parameter** | **Type**   | **Required** | **Description**                             |
+|---------------|------------|--------------|---------------------------------------------|
+| `name`        | `string`   | Yes          | The name of the Pokémon generation (in English or French). |
 
 ---
 
-## 📤 Réponse
+## 📤 Response
 
-### **Format :** `application/json`
+### **Format:** `application/json`
 
-### **Structure des données retournées :**
+### **Structure of the returned data:**
 
 ```json
 {
@@ -711,31 +717,30 @@ Cet endpoint permet de récupérer les détails d'une génération Pokémon spé
     ]
 }
 ```
-
 ---
 
-### 🧩 Technologies utilisées
+### 🧩 Technologies Used
 
-- **Backend :** Laravel
-- **Base de données :** PostgreSQL
+- **Backend:** Laravel
+- **Database:** PostgreSQL
 
 ---
 
 ### 📝 Contribution
 
-Les contributions sont les bienvenues ! Si vous souhaitez ajouter des fonctionnalités, corriger des bugs, ou améliorer le projet, suivez ces étapes :
+Contributions are welcome! If you want to add features, fix bugs, or improve the project, follow these steps:
 
-1. Forkez le projet.
-2. Créez une branche pour votre fonctionnalité :
+1. Fork the project.
+2. Create a branch for your feature:
    ```bash
-   git checkout -b feature/nom-de-la-fonctionnalité
+   git checkout -b feature/your-feature-name
    ```
-3. Effectuez vos modifications et validez-les :
+3. Make your changes and commit them:
     ```bash
     git commit -m "Ajout de la fonctionnalité X"
     ```
-4. Push les modifications :
+4. Push your changes:
     ```bash
     git push origin feature/nom-de-la-fonctionnalite
     ```
-5. Créez une Pull Request.
+5. Create a Pull Request.
