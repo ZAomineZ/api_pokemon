@@ -26,9 +26,9 @@ Avant de commencer, assurez-vous que votre système dispose des outils suivants 
 Commencez par cloner le dépôt GitHub :
 
 ```bash
-git clone https://github.com/votre-utilisateur/pokemon-api.git
+git clone https://github.com/ZAomineZ/api_pokemon.git
 
-cd pokemon-api
+cd api_pokemon
 ```
 
 ### 2️⃣ **Installer les dépendances**
@@ -732,10 +732,10 @@ Les contributions sont les bienvenues ! Si vous souhaitez ajouter des fonction
    ```
 3. Effectuez vos modifications et validez-les :
     ```bash
-       git commit -m "Ajout de la fonctionnalité X"
+    git commit -m "Ajout de la fonctionnalité X"
     ```
 4. Push les modifications :
     ```bash
-       git push origin feature/nom-de-la-fonctionnalite
+    git push origin feature/nom-de-la-fonctionnalite
     ```
 5. Créez une Pull Request.
