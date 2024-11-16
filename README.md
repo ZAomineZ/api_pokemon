@@ -47,7 +47,7 @@ Copiez le fichier d'exemple .env.example pour créer votre fichier .env:
 ```bash
 cp .env.example .env
 
-DB_CONNECTION=mysql
+DB_CONNECTION=pgsql
 DB_HOST=127.0.0.1
 DB_PORT=3306
 DB_DATABASE=pokemon_api
